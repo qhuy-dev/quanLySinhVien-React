@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+/* Design tokens lấy từ Figma "06 · Hệ thống giao diện" */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-tint: #eff6ff;
+  --color-blue-border: #dbeafe;
+  --color-bar: #93c5fd;
+
+  --color-ink: #1e293b;
+  --color-ink-strong: #0f172a;
+  --color-secondary: #475569;
+  --color-muted: #64748b;
+  --color-subtle: #94a3b8;
+
+  --color-line: #e2e8f0;
+  --color-line-strong: #cbd5e1;
+  --color-page: #f8fafc;
+  --color-field-disabled: #f1f5f9;
+
+  --color-success: #047857;
+  --color-success-tint: #ecfdf5;
+  --color-green: #15803d;
+  --color-green-tint: #f0fdf4;
+  --color-green-border: #bbf7d0;
+
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-danger-tint: #fef2f2;
+
+  --color-amber: #b45309;
+  --color-amber-text: #a16207;
+  --color-amber-tint: #fffbeb;
+
+  --color-violet: #7c3aed;
+  --color-violet-tint: #f5f3ff;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-page font-sans text-ink antialiased;
+    line-height: 1.45;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-toast-in {
+  animation: toast-in 0.18s ease-out;
+}
