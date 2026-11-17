@@ -5,7 +5,8 @@ import { ToastProvider } from './context/ToastContext.jsx'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    // basename lấy từ `base` trong vite.config.js (GitHub Pages: /quanLySinhVien-React/)
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <DataProvider>
         <ToastProvider>
           <AppRoutes />

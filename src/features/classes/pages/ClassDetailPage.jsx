@@ -143,7 +143,7 @@ export default function ClassDetailPage() {
             onPageSizeChange={pager.setPageSize}
             pageSizeLabel=""
             pageSizeFormat={(n) => `${n} dòng`}
-            pageSizeClassName="w-[98px]"
+            pageSizeClassName="w-[112px]"
           />
         </div>
       </section>
